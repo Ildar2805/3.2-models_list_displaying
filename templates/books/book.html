@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}{{ book.name }}{% endblock %}
+
+{% block content %}
+  <div class="container">
+  <div class="header">
+    <h5>
+      <a href="{% url 'books' %}">Вернуться в каталог</a>
+    </h5>
+
+  </div>
+
+  <div class="content">
+    <h2>{{ book.name }}</h2>
+    <div>Автор: {{ book.author }} ₽</div>
+    <div>Дата публикации: {{ book.pub_date }}</div>
+  </div>
+
+{% endblock %}
